@@ -2,30 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer theme {
-    .background {
-        @apply bg-background-light dark:bg-background-dark;
-    }
-
-    .foreground {
-        @apply text-foreground-light dark:text-foreground-dark;
-    }
-}
-
-:root {
-    --background-light: #ffffff;
-    --foreground-light: #000000;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background-dark: #000000;
-        --foreground-dark: #ffffff;
-    }
-}
-
 @layer base {
-  :root {
+    :root {
         --background: 0 0% 100%;
         --foreground: 0 0% 3.9%;
         --card: 0 0% 100%;
@@ -52,7 +30,7 @@
         --chart-5: 27 87% 67%;
         --radius: 0.5rem;
     }
-  .dark {
+    .dark {
         --background: 0 0% 3.9%;
         --foreground: 0 0% 98%;
         --card: 0 0% 3.9%;
@@ -80,11 +58,11 @@
     }
 }
 
-@layer base {
-  * {
-    @apply border-border;
+@layer theme {
+    * {
+        @apply border-border;
     }
-  body {
-    @apply bg-background text-foreground;
+    body {
+        @apply bg-background text-foreground;
     }
 }
