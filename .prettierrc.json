@@ -27,6 +27,7 @@
         "^react$",
         "^next(/.*)?$",
         "next-themes",
+        "@radix-ui/react-.*",
         "@/*",
         "<THIRD_PARTY_MODULES>"
     ],
