@@ -26,6 +26,8 @@
         "fs|os|path",
         "^react$",
         "^next(/.*)?$",
+        "next-themes",
+        "@/*",
         "<THIRD_PARTY_MODULES>"
     ],
     "importOrderSeparation": true,

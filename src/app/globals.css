@@ -2,26 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer theme {
+    .background {
+        @apply bg-background-light dark:bg-background-dark;
+    }
+
+    .foreground {
+        @apply text-foreground-light dark:text-foreground-dark;
+    }
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background-light: #ffffff;
+    --foreground-light: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    :root {
+        --background-dark: #000000;
+        --foreground-dark: #ffffff;
+    }
 }
