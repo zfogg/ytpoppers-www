@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "private": true,
     "website": "https://nextjs-15-starter-core-core.vercel.app/",
+    "license": "MIT",
     "scripts": {
         "dev": "next dev --turbopack",
         "build": "next build",
