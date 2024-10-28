@@ -19,7 +19,7 @@ const RECOMMENDED_EXTENSIONS = [
     'yzhang.markdown-all-in-one'
 ];
 
-async function fetchExtensionDetails(extension) {
+const fetchExtensionDetails = async (extension) => {
     const response = await fetch('https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery', {
         method: 'POST',
         headers: {
@@ -46,11 +46,10 @@ async function fetchExtensionDetails(extension) {
     ).source;
 
     return { name: extension, displayName: extensionData.displayName, downloadCount, iconUri };
-}
+};
 
 const ExtensionDetails = async () => {
     const extensionDetails = await Promise.all(RECOMMENDED_EXTENSIONS.map(fetchExtensionDetails));
-    console.log(extensionDetails);
     return (
         <div className='grid grid-cols-9 gap-6'>
             {extensionDetails.map((extension) => {

@@ -1,6 +1,8 @@
 import Image from 'next/image';
 
 import ExtensionDetails from '@/app/ExtensionDetails';
+import LibraryDetails from '@/app/LibraryDetails';
+import ThemeSwitch from '@/app/ThemeSwitch';
 
 export default function Home() {
     return (
@@ -24,7 +26,6 @@ export default function Home() {
                     </li>
                     <li>Save and see your changes instantly.</li>
                 </ol>
-
                 <div className='flex flex-col items-center gap-4 sm:flex-row'>
                     <a
                         className='bg-foreground text-background flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent px-4 text-sm transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] sm:h-12 sm:px-5 sm:text-base'
@@ -48,11 +49,13 @@ export default function Home() {
                         Read our docs
                     </a>
                 </div>
+                <ThemeSwitch />
             </main>
-            <div className='space-y-6 pt-9'>
+            {/* <LibraryDetails /> */}
+            {/* <div className='space-y-6 pt-9'>
                 <h2 className='text-center text-lg'>Extensions</h2>
                 <ExtensionDetails />
-            </div>
+            </div> */}
             <footer className='row-start-3 flex flex-wrap items-center justify-center gap-6'>
                 <a
                     className='flex items-center gap-2 hover:underline hover:underline-offset-4'
