@@ -25,12 +25,12 @@ Welcome to the **Next.js 15 Starter** repository! This starter template is built
 - [**eslint-plugin-tailwindcss**](https://github.com/francoismassart/eslint-plugin-tailwindcss)
 - [**eslint-config-prettier**](eslint-config-prettier)
 - [**eslint-plugin-import**](https://github.com/import-js/eslint-plugin-import)
-- [**eslint-plugin-promise**](https://github.com/eslint-community/eslint-plugin-promise) convert these to html format
+- [**eslint-plugin-promise**](https://github.com/eslint-community/eslint-plugin-promise)
 
 ### ✨ Prettier Plugins
 
 - [**prettier-plugin-tailwindcss**](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
-- [**@trivago/prettier-plugin-sort-imports**](https://github.com/trivago/prettier-plugin-sort-imports) convert this to html
+- [**@trivago/prettier-plugin-sort-imports**](https://github.com/trivago/prettier-plugin-sort-imports)
 
 ### 💻 VS Code Extensions (Recommended)
 
@@ -53,7 +53,7 @@ To enhance development experience, install the following VS Code extensions:
 - [**Package Json Upgrade**](https://marketplace.visualstudio.com/items?itemName=codeandstuff.package-json-upgrade)
 - [**Inline fold**](https://marketplace.visualstudio.com/items?itemName=moalamri.inline-fold)
 - [**Visual Studio Code Commitizen Support**](https://marketplace.visualstudio.com/items?itemName=KnisterPeter.vscode-commitizen)
-- [**Markdown All in One**](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) convert this to html
+- [**Markdown All in One**](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 
 
 ## 🏁 Getting Started
