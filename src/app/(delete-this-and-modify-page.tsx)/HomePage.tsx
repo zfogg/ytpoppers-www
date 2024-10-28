@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
 import ExtensionDetails from '@/app/(delete-this-and-modify-page.tsx)/ExtensionDetails';
-import PageLoadTime from '@/app/(delete-this-and-modify-page.tsx)/PageLoadTime';
 import SetupDetails from '@/app/(delete-this-and-modify-page.tsx)/SetupDetails';
 import ThemeSwitch from '@/app/(delete-this-and-modify-page.tsx)/ThemeSwitch';
 
@@ -52,18 +51,7 @@ const HomePage: React.FC = () => {
                 </div>
                 <ThemeSwitch />
             </div>
-            <div className='space-y-6'>
-                <h2 className='text-center text-lg'>Whats included?</h2>
-                <SetupDetails />
-            </div>
-            <div className='space-y-6'>
-                <h2 className='text-center text-lg'>VS Code Extensions</h2>
-                <ExtensionDetails />
-            </div>
-            <div className='fixed bottom-6 right-6'>
-                <PageLoadTime />
-            </div>
-            <footer className='row-start-3 flex flex-wrap items-center justify-center gap-6'>
+            <div className='row-start-3 flex flex-wrap items-center justify-center gap-6'>
                 <a
                     className='flex items-center gap-2 hover:underline hover:underline-offset-4'
                     href='https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
@@ -100,7 +88,15 @@ const HomePage: React.FC = () => {
                     />
                     Go to nextjs.org →
                 </a>
-            </footer>
+            </div>
+            <div className='space-y-6'>
+                <h2 className='text-center text-lg'>Whats included?</h2>
+                <SetupDetails />
+            </div>
+            <div className='space-y-6'>
+                <h2 className='text-center text-lg'>VS Code Extensions</h2>
+                <ExtensionDetails />
+            </div>
         </main>
     );
 };
