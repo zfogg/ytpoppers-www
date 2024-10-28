@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import ExtensionDetails from '@/app/(delete-this-and-modify-page.tsx)/ExtensionDetails';
+import PageLoadTime from '@/app/(delete-this-and-modify-page.tsx)/PageLoadTime';
 import SetupDetails from '@/app/(delete-this-and-modify-page.tsx)/SetupDetails';
 import ThemeSwitch from '@/app/(delete-this-and-modify-page.tsx)/ThemeSwitch';
 
@@ -28,7 +29,7 @@ const HomePage: React.FC = () => {
                 </ol>
                 <div className='flex flex-col items-center gap-4 sm:flex-row'>
                     <a
-                        className='flex h-10 flex-wrap items-center justify-center gap-2 gap-x-3 rounded-full border border-solid border-transparent bg-neutral-200 px-4 text-sm transition-colors hover:bg-[#383838] dark:bg-neutral-700 dark:hover:bg-neutral-600 sm:h-12 sm:px-5 sm:text-base'
+                        className='flex h-10 flex-wrap items-center justify-center gap-2 gap-x-3 rounded-full border border-solid border-transparent bg-neutral-200 px-4 text-sm transition-colors hover:bg-neutral-300 dark:bg-neutral-700 dark:hover:bg-neutral-600 sm:h-12 sm:px-5 sm:text-base'
                         href='https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
                         target='_blank'
                         rel='noopener noreferrer'>
@@ -58,6 +59,9 @@ const HomePage: React.FC = () => {
             <div className='space-y-6'>
                 <h2 className='text-center text-lg'>VS Code Extensions</h2>
                 <ExtensionDetails />
+            </div>
+            <div className='fixed bottom-6 right-6'>
+                <PageLoadTime />
             </div>
             <footer className='row-start-3 flex flex-wrap items-center justify-center gap-6'>
                 <a

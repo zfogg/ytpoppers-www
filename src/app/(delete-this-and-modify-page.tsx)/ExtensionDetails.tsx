@@ -85,7 +85,9 @@ const ExtensionDetails: React.FC = async () => {
             {extensionDetails.map((extension) => {
                 return (
                     <div key={extension.name} className='group relative inline-flex justify-center'>
-                        <Link href={`https://marketplace.visualstudio.com/items?itemName=${extension.name}`}>
+                        <Link
+                            href={`https://marketplace.visualstudio.com/items?itemName=${extension.name}`}
+                            target='_blank'>
                             <img className='size-9 hover:cursor-pointer' src={extension.iconUri} alt={extension.name} />
                         </Link>
                         <div className='absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 transform space-y-1.5 whitespace-nowrap rounded bg-neutral-200 p-3 text-sm text-black group-hover:block'>
