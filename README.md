@@ -18,29 +18,42 @@ Welcome to the **Next.js 15 Starter** repository! This starter template is built
 
 ### 🛠️ ESLint Plugins
 
-- **@eslint/js**
-- **typescript-eslint**
-- **eslint-plugin-react**
-- **@next/eslint-plugin-next**
-- **eslint-plugin-tailwindcss**
-- **eslint-config-prettier**
-- **eslint-plugin-import**
-- **eslint-plugin-promise**
+- [**@eslint/js ↗**](https://www.npmjs.com/package/@eslint/js){:target="_blank"}
+- [**typescript-eslint ↗**](https://github.com/typescript-eslint/typescript-eslint)
+- [**eslint-plugin-react ↗**](https://github.com/jsx-eslint/eslint-plugin-react)
+- [**@next/eslint-plugin-next ↗**](https://github.com/vercel/next.js)
+- [**eslint-plugin-tailwindcss ↗**](https://github.com/francoismassart/eslint-plugin-tailwindcss)
+- [**eslint-config-prettier ↗**](eslint-config-prettier)
+- [**eslint-plugin-import ↗**](https://github.com/import-js/eslint-plugin-import)
+- [**eslint-plugin-promise ↗**](https://github.com/eslint-community/eslint-plugin-promise)
 
 ### ✨ Prettier Plugins
 
-- **prettier-plugin-tailwindcss**
-- **@trivago/prettier-plugin-sort-imports**
+- [**prettier-plugin-tailwindcss ↗**](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
+- [**@trivago/prettier-plugin-sort-imports ↗**](https://github.com/trivago/prettier-plugin-sort-imports)
 
 ### 💻 VS Code Extensions (Recommended)
 
 To enhance development experience, install the following VS Code extensions:
 
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [Prettier - Code Formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
-- [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
-- [TypeScript Hero](https://marketplace.visualstudio.com/items?itemName=rbbit.typescript-hero)
+- [**Auto Close Tag ↗**](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
+- [**Better Comments ↗**](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
+- [**DotENV ↗**](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
+- [**EditorConfig for VS Code ↗**](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+- [**ESLint ↗**](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [**formate: CSS/LESS/SCSS formatter ↗**](https://marketplace.visualstudio.com/items?itemName=MikeBovenlander.formate)
+- [**Git History ↗**](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
+- [**Import Cost ↗**](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
+- [**JavaScript Booster ↗**](https://marketplace.visualstudio.com/items?itemName=sburg.vscode-javascript-booster)
+- [**npm Intellisense ↗**](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
+- [**Prettier - Code formatter ↗**](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [**Tailwind CSS IntelliSense ↗**](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+- [**Todo Tree ↗**](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
+- [**Turbo Console Log ↗**](https://marketplace.visualstudio.com/items?itemName=ChakrounAnas.turbo-console-log)
+- [**Package Json Upgrade ↗**](https://marketplace.visualstudio.com/items?itemName=codeandstuff.package-json-upgrade)
+- [**Inline fold ↗**](https://marketplace.visualstudio.com/items?itemName=moalamri.inline-fold)
+- [**Visual Studio Code Commitizen Support ↗**](https://marketplace.visualstudio.com/items?itemName=KnisterPeter.vscode-commitizen)
+- [**Markdown All in One ↗**](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 
 ## 🏁 Getting Started
 

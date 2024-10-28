@@ -79,15 +79,18 @@ const fetchExtensionDetails = async (extension: string): Promise<ExtensionDetail
 // ExtensionDetails component with types
 const ExtensionDetails: React.FC = async () => {
     const extensionDetails = await Promise.all(RECOMMENDED_EXTENSIONS.map(fetchExtensionDetails));
+    console.log(
+        extensionDetails
+            .map((e) => `- [**${e.displayName} ↗**](https://marketplace.visualstudio.com/items?itemName=${e.name})`)
+            .join('\n')
+    );
 
     return (
         <div className='mx-auto grid max-w-2xl grid-cols-6 gap-y-3 sm:grid-cols-9 sm:gap-y-6'>
             {extensionDetails.map((extension) => {
                 return (
                     <div key={extension.name} className='group relative inline-flex justify-center'>
-                        <Link
-                            href={`https://marketplace.visualstudio.com/items?itemName=${extension.name}`}
-                            target='_blank'>
+                        <Link href={``} target='_blank'>
                             <img className='size-9 hover:cursor-pointer' src={extension.iconUri} alt={extension.name} />
                         </Link>
                         <div className='absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 transform space-y-1.5 whitespace-nowrap rounded bg-neutral-200 p-3 text-sm text-black group-hover:block'>
