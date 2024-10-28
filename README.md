@@ -90,7 +90,7 @@ To enhance development experience, install the following VS Code extensions:
     npm run build
     ```
 
-### Docker Setup
+### 🐳 Docker Setup
 
 To use Docker, make sure Docker is installed on your machine. Then, build and run the Docker container:
 
@@ -98,6 +98,22 @@ To use Docker, make sure Docker is installed on your machine. Then, build and ru
 docker build -t nextjs-starter .
 docker run -p 3000:3000 nextjs-starter
 ```
+
+### ☁ Try it in the Cloud
+
+[![Open in VS Code](https://img.shields.io/badge/Open%20in-VS%20Code-blue?logo=visualstudiocode)](https://vscode.dev/github/SiddharthaMaity/nextjs-15-starter-core)
+
+[![Open in GitHub Codespaces](https://img.shields.io/badge/Open%20in-GitHub%20Codespaces-blue?logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=SiddharthaMaity/nextjs-15-starter-core)
+
+[![Open in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/SiddharthaMaity/nextjs-15-starter-core)
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/SiddharthaMaity/nextjs-15-starter-core)
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg)](https://stackblitz.com/github/SiddharthaMaity/nextjs-15-starter-core)
+
+[![Open in Repl.it](https://replit.com/badge/github/SiddharthaMaity/nextjs-15-starter-core)](https://replit.com/github/SiddharthaMaity/nextjs-15-starter-core)
+
+[![Open in Glitch](https://img.shields.io/badge/Open%20in-Glitch-blue?logo=glitch)](https://glitch.com/edit/#!/import/github/SiddharthaMaity/nextjs-15-starter-core)
 
 ### License
 
