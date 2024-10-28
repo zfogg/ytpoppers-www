@@ -6,7 +6,7 @@ import ThemeSwitch from '@/app/(delete-this-and-modify-page.tsx)/ThemeSwitch';
 
 const HomePage: React.FC = () => {
     return (
-        <main className='mx-auto flex h-screen max-w-3xl flex-col justify-center gap-12 font-[family-name:var(--font-geist-sans)]'>
+        <main className='mx-auto flex h-screen max-w-3xl flex-col justify-center gap-6 px-3 font-[family-name:var(--font-geist-sans)] sm:gap-12 sm:px-0'>
             <div className='justify-centersm:items-start row-start-2 flex flex-col items-center gap-8'>
                 <Image
                     className='dark:invert'
@@ -26,7 +26,7 @@ const HomePage: React.FC = () => {
                     </li>
                     <li>Save and see your changes instantly.</li>
                 </ol>
-                <div className='flex flex-col items-center gap-4 sm:flex-row'>
+                <div className='flex items-center gap-4'>
                     <a
                         className='flex h-10 flex-wrap items-center justify-center gap-2 gap-x-3 rounded-full border border-solid border-transparent bg-neutral-200 px-4 text-sm transition-colors hover:bg-neutral-300 dark:bg-neutral-700 dark:hover:bg-neutral-600 sm:h-12 sm:px-5 sm:text-base'
                         href='https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'

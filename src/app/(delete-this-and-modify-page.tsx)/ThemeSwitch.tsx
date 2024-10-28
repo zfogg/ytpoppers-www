@@ -40,8 +40,8 @@ const ThemeSwitch: React.FC = () => {
     useEffect(() => setMounted(true), []);
 
     return (
-        <div className='fixed right-6 top-6'>
-            <div className='flex w-auto justify-center overflow-hidden rounded-3xl border border-neutral-200 dark:border-neutral-700'>
+        <div className='fixed right-3 top-3 sm:right-6 sm:top-6'>
+            <div className='flex w-auto flex-row justify-center overflow-hidden rounded-3xl border border-neutral-200 dark:border-neutral-700 sm:flex-row'>
                 {SWITCH_DATA.map((data) => (
                     <button
                         key={data.value}
@@ -50,7 +50,7 @@ const ThemeSwitch: React.FC = () => {
                         } dark:hover:bg-neutral-800`}
                         onClick={() => setTheme(data.value)}>
                         {data.iconSvg}
-                        <h3>{data.name}</h3>
+                        <h3 className='hidden sm:block'>{data.name}</h3>
                     </button>
                 ))}
             </div>
