@@ -1,6 +1,6 @@
-# Next.js 15 Starter (core)
+# Next.js 15 Starter (core) [DEMO]
 
-Welcome to the **Next.js 15 Starter** repository! This starter template is built with Next.js 15, React 19, and TypeScript 5, and comes packed with several powerful tools and configurations to accelerate your project setup and streamline development workflows.
+Welcome to the **Next.js 15 Starter** repository! This starter template is built with Next.js 15, React 19, and TypeScript 5, and comes packed with several powerful tools and configurations to accelerate your project setup and streamline development workflows using VS Code.
 
 ![Next.js 15 Starter](public/images/screenshot.png)
 
@@ -53,8 +53,8 @@ To enhance development experience, install the following VS Code extensions:
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/yourusername/nextjs-15-starter.git
-    cd nextjs-15-starter
+    git clone https://github.com/yourusername/nextjs-15-starter-core.git
+    cd nextjs-15-starter-core
     ```
 
 2. **Install Dependencies**:
