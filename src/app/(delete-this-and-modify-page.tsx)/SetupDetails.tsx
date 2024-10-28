@@ -57,18 +57,18 @@ const SetupDetails: React.FC = () => {
     return (
         <div>
             <div>
-                <ol className='flex flex-wrap justify-center gap-3'>
+                <ol className='flex flex-wrap justify-center gap-3 gap-y-1 sm:gap-y-3'>
                     {FEATURES.map((feature, index) => (
                         <Fragment key={feature.name}>
                             <li>
-                                <h2 className='text-lg'>{feature.name}</h2>
+                                <h2 className='text-sm sm:text-lg'>{feature.name}</h2>
                             </li>
                             {index < FEATURES.length - 1 && <span>•</span>}
                         </Fragment>
                     ))}
                 </ol>
             </div>
-            <div className='mt-9'>
+            <div className='mt-9 hidden sm:block'>
                 <ul className='flex flex-wrap justify-center gap-x-3 text-xs'>
                     {ESLINT_PLUGINS.map((setup) => (
                         <li key={setup.name} className='text-nowrap'>
@@ -79,7 +79,7 @@ const SetupDetails: React.FC = () => {
                     ))}
                 </ul>
             </div>
-            <div className='mt-3'>
+            <div className='mt-9 hidden sm:block'>
                 <ul className='flex flex-wrap justify-center gap-x-3 text-xs'>
                     {PRETTIER_PLUGINS.map((plugin) => (
                         <li key={plugin.name}>

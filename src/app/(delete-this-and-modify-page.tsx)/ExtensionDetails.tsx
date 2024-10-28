@@ -81,7 +81,7 @@ const ExtensionDetails: React.FC = async () => {
     const extensionDetails = await Promise.all(RECOMMENDED_EXTENSIONS.map(fetchExtensionDetails));
 
     return (
-        <div className='mx-auto grid max-w-2xl grid-cols-9 gap-y-6'>
+        <div className='mx-auto grid max-w-2xl grid-cols-6 gap-y-3 sm:grid-cols-9 sm:gap-y-6'>
             {extensionDetails.map((extension) => {
                 return (
                     <div key={extension.name} className='group relative inline-flex justify-center'>
