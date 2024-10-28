@@ -1,8 +1,8 @@
-# Next.js 15 Starter
+# Next.js 15 Starter (core)
 
 Welcome to the **Next.js 15 Starter** repository! This starter template is built with Next.js 15, React 19, and TypeScript 5, and comes packed with several powerful tools and configurations to accelerate your project setup and streamline development workflows.
 
-![Next.js 15 Starter](./path-to-image.png)
+![Next.js 15 Starter](public/images/screenshot.png)
 
 ## 🚀 What's Included
 
@@ -53,4 +53,33 @@ To enhance development experience, install the following VS Code extensions:
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/
+    git clone https://github.com/yourusername/nextjs-15-starter.git
+    cd nextjs-15-starter
+    ```
+
+2. **Install Dependencies**:
+    ```bash
+    npm install
+    # or with Yarn
+    yarn install
+    ```
+
+3. **Run Development Server**:
+    ```bash
+    npm run dev
+    # or with Yarn
+    yarn dev
+    ```
+
+4. **Build for Production**:
+    ```bash
+    npm run build
+    ```
+
+### Docker Setup
+
+To use Docker, make sure Docker is installed on your machine. Then, build and run the Docker container:
+
+```bash
+docker build -t nextjs-starter .
+docker run -p 3000:3000 nextjs-starter
