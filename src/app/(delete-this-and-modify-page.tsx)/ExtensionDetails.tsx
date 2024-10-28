@@ -21,7 +21,6 @@ const RECOMMENDED_EXTENSIONS: string[] = [
     'yzhang.markdown-all-in-one'
 ];
 
-// Define TypeScript types
 interface ExtensionStatistics {
     statisticName: string;
     value: number;
@@ -79,11 +78,6 @@ const fetchExtensionDetails = async (extension: string): Promise<ExtensionDetail
 // ExtensionDetails component with types
 const ExtensionDetails: React.FC = async () => {
     const extensionDetails = await Promise.all(RECOMMENDED_EXTENSIONS.map(fetchExtensionDetails));
-    console.log(
-        extensionDetails
-            .map((e) => `- [**${e.displayName} ↗**](https://marketplace.visualstudio.com/items?itemName=${e.name})`)
-            .join('\n')
-    );
 
     return (
         <div className='mx-auto grid max-w-2xl grid-cols-6 gap-y-3 sm:grid-cols-9 sm:gap-y-6'>
