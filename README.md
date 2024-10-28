@@ -1,4 +1,4 @@
-# Next.js 15 Starter (core) [DEMO]
+# Next.js 15 Starter (core)
 
 Welcome to the **Next.js 15 Starter** repository! This starter template is built with Next.js 15, React 19, and TypeScript 5, and comes packed with several powerful tools and configurations to accelerate your project setup and streamline development workflows using VS Code.
 
