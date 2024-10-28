@@ -1,6 +1,8 @@
 {
     // JS
     "javascript.updateImportsOnFileMove.enabled": "always",
+    // TS
+    "typescript.updateImportsOnFileMove.enabled": "always",
     // JSON
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
@@ -23,19 +25,10 @@
     },
     "eslint.validate": [
         "javascript",
-        "typescript",
         "javascriptreact",
+        "typescript",
         "typescriptreact"
     ],
     "eslint.format.enable": true,
     "npm.packageManager": "npm",
-    "[dotenv]": {
-        "editor.defaultFormatter": "foxundermoon.shell-format"
-    },
-    "[ignore]": {
-        "editor.defaultFormatter": "foxundermoon.shell-format"
-    },
-    "[properties]": {
-        "editor.defaultFormatter": "foxundermoon.shell-format"
-    }
 }
