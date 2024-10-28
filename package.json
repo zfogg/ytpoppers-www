@@ -2,6 +2,7 @@
     "name": "nextjs-15-starter",
     "version": "1.0.0",
     "private": true,
+    "website": "https://nextjs-15-starter-core.vercel.app/",
     "scripts": {
         "dev": "next dev --turbopack",
         "build": "next build",

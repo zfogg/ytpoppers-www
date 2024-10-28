@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Next.js 15 Starter
+Welcome to the Next.js 15 Starter repository! This starter template is built with Next.js 15, React 19, and TypeScript 5, and comes packed with several powerful tools and configurations to accelerate your project setup and streamline development workflows.
 
-## Getting Started
 
-First, run the development server:
+🚀 What's Included
+Next.js 15 (Stable)
+React 19 (RC)
+TypeScript 5
+TailwindCSS 3
+ESLint 9
+Prettier 3
+App Directory with System, Light & Dark Mode
+Next.js Bundle Analyzer
+Dockerfile with Node.js 20.18.0 (Alpine)
+🛠️ ESLint Plugins
+@eslint/js
+typescript-eslint
+eslint-plugin-react
+@next/eslint-plugin-next
+eslint-plugin-tailwindcss
+eslint-config-prettier
+eslint-plugin-import
+eslint-plugin-promise
+✨ Prettier Plugins
+prettier-plugin-tailwindcss
+@trivago/prettier-plugin-sort-imports
+💻 VS Code Extensions (Recommended)
+To enhance development experience, install the following VS Code extensions:
 
-```bash
+ESLint
+Prettier - Code Formatter
+Tailwind CSS IntelliSense
+DotENV
+TypeScript Hero
+🏁 Getting Started
+Prerequisites
+Node.js: Version 20.18.0 or higher (configured in Docker)
+Docker: For containerized deployment (optional but recommended)
+Installation
+Clone the Repository:
+
+bash
+Copy code
+git clone https://github.com/yourusername/nextjs-15-starter.git
+cd nextjs-15-starter
+Install Dependencies:
+
+bash
+Copy code
+npm install
+# or with Yarn
+yarn install
+Run Development Server:
+
+bash
+Copy code
 npm run dev
-# or
+# or with Yarn
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Build for Production:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+bash
+Copy code
+npm run build
+Docker Setup
+To use Docker, make sure Docker is installed on your machine. Then, build and run the Docker container:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+bash
+Copy code
+docker build -t nextjs-starter .
+docker run -p 3000:3000 nextjs-starter
+This command will start the application on http://localhost:3000.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📂 Folder Structure
+plaintext
+Copy code
+├── src/
+│   ├── app/
+│   ├── components/
+│   ├── pages/
+│   ├── styles/
+│   ├── utils/
+├── public/
+├── .eslintrc.json
+├── .prettierrc
+├── Dockerfile
+└── README.md
+Key Folders
+app: Main application code following the Next.js App Router structure.
+components: Reusable React components.
+pages: Legacy pages if needed.
+styles: Global styles including Tailwind configuration.
+🌟 Features
+Dark Mode & Theme Switching: System, Light, and Dark modes are supported out of the box.
+Linting and Formatting: Configured with ESLint and Prettier for consistent code style.
+CI/CD Ready: Easily deployable to Vercel, Netlify, or Docker-compatible environments.
+Development Enhancements: Pre-configured VS Code settings and extensions for a smooth experience.
+📜 License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Learn More
+🤝 Contributing
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
-To learn more about Next.js, take a look at the following resources:
+Fork the repository
+Create a new branch (git checkout -b feature-branch)
+Commit your changes (git commit -m "Add new feature")
+Push to the branch (git push origin feature-branch)
+Create a pull request
+🙏 Acknowledgments
+Special thanks to the contributors of the following tools and libraries used in this template:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Next.js
+Tailwind CSS
+TypeScript
+Docker
