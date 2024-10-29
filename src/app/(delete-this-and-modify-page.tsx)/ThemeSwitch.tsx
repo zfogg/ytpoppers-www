@@ -40,7 +40,7 @@ const ThemeSwitch: React.FC = () => {
     useEffect(() => setMounted(true), []);
 
     return (
-        <div className=''>
+        <div className='w-fit'>
             <div className='flex w-auto flex-row justify-center overflow-hidden rounded-3xl border border-neutral-200 dark:border-neutral-700 sm:flex-row'>
                 {SWITCH_DATA.map((data) => (
                     <button
@@ -48,7 +48,10 @@ const ThemeSwitch: React.FC = () => {
                         className={`flex items-center gap-2 px-4 py-2 text-black dark:text-white ${
                             theme === data.value && mounted ? 'bg-neutral-200 dark:bg-neutral-700' : 'bg-transparent'
                         } dark:hover:bg-neutral-800`}
-                        onClick={() => setTheme(data.value)}>
+                        onClick={() => {
+                            console.log('Theme:', data.value);
+                            setTheme(data.value);
+                        }}>
                         {data.iconSvg}
                         <h3 className='hidden sm:block'>{data.name}</h3>
                     </button>
