@@ -1,5 +1,9 @@
 # Next.js 15 Starter (core) [[LIVE DEMO](https://nextjs-15-starter-core.vercel.app/)]
 
+*This is the core version for Next.js 15 Starter, you may be interested in other templates too -*
+- [**Next.js 15 Starter with Tailwind CSS**](https://github.com/SiddharthaMaity/nextjs-15-starter-tailwind)
+- [**Next.js 15 Starter with Shadcn UI**](https://github.com/SiddharthaMaity/nextjs-15-starter-shadcn)
+
 Welcome to the **Next.js 15 Starter** repository! This starter template is built with Next.js 15, React 19, TypeScript 5 and comes packed with several powerful tools and configurations to accelerate your project setup and streamline development workflows using VS Code.
 
 ![Next.js 15 Starter](public/images/screenshot.png)
