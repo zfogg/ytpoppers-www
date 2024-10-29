@@ -33,7 +33,7 @@ export default function Home() {
                         target='_blank'
                         rel='noopener noreferrer'
                         className='secondary'>
-                        Read our docs
+                        Read Next.js docs
                     </a>
                 </div>
                 <SetupDetails />
