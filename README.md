@@ -10,7 +10,16 @@ Welcome to the **Next.js 15 Starter** repository! This starter template is built
 
 ## 🚀 What's Included
 
-- [**All in Next.js 15 Starter Core**](https://github.com/SiddharthaMaity/nextjs-15-starter-core)
+- **Next.js 15 (Stable)**
+- **React 19 (RC)**
+- **TypeScript 5**
+- **ESLint 9**
+- **Prettier 3**
+- **Tailwind CSS 3**
+- **App Directory**
+- **System, Light & Dark Mode**
+- **Next.js Bundle Analyzer**
+- **Dockerfile** with Node.js 20.18.0 (Alpine)
 - [**Tailwind CSS**](https://tailwindcss.com/)
 
 ### 🛠️ ESLint Plugins
