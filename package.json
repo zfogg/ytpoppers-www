@@ -1,8 +1,8 @@
 {
-    "name": "nextjs-15-starter-core",
+    "name": "nextjs-15-starter-tailwind",
     "version": "1.0.0",
     "private": true,
-    "website": "https://nextjs-15-starter-core-core.vercel.app/",
+    "website": "https://nextjs-15-starter-tailwind-core.vercel.app/",
     "license": "MIT",
     "scripts": {
         "dev": "next dev --turbopack",
