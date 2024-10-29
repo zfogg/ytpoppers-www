@@ -1,7 +1,5 @@
 import Link from 'next/link';
 
-import './ExtensionDetails.css';
-
 const RECOMMENDED_EXTENSIONS: string[] = [
     'PulkitGangwar.nextjs-snippets',
     'formulahendry.auto-close-tag',
@@ -20,7 +18,9 @@ const RECOMMENDED_EXTENSIONS: string[] = [
     'codeandstuff.package-json-upgrade',
     'moalamri.inline-fold',
     'KnisterPeter.vscode-commitizen',
-    'yzhang.markdown-all-in-one'
+    'yzhang.markdown-all-in-one',
+    'bradlc.vscode-tailwindcss',
+    'austenc.tailwind-docs'
 ];
 
 interface ExtensionStatistics {
@@ -46,6 +46,7 @@ interface ExtensionDetails {
     iconUri: string;
 }
 
+// Fetch extension details function with types
 const fetchExtensionDetails = async (extension: string): Promise<ExtensionDetails> => {
     const response = await fetch('https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery', {
         method: 'POST',
@@ -66,6 +67,7 @@ const fetchExtensionDetails = async (extension: string): Promise<ExtensionDetail
     const data = await response.json();
     const extensionData: ExtensionData = data.results[0].extensions[0];
 
+    // Extract relevant details
     const downloadCount = extensionData.statistics.find((stat) => stat.statisticName === 'install')?.value ?? 0;
     const iconUri =
         extensionData.versions[0].files.find(
@@ -75,22 +77,25 @@ const fetchExtensionDetails = async (extension: string): Promise<ExtensionDetail
     return { name: extension, displayName: extensionData.displayName, downloadCount, iconUri };
 };
 
+// ExtensionDetails component with types
 const ExtensionDetails: React.FC = async () => {
     const extensionDetails = await Promise.all(RECOMMENDED_EXTENSIONS.map(fetchExtensionDetails));
 
     return (
-        <div className='extension-container'>
-            {extensionDetails.map((extension) => (
-                <div key={extension.name} className='extension-item'>
-                    <Link href={``} target='_blank'>
-                        <img className='size-9' src={extension.iconUri} alt={extension.name} />
-                    </Link>
-                    <div className='extension-tooltip'>
-                        <h3>{extension.displayName}</h3>
-                        <p>Downloads: {extension.downloadCount.toLocaleString()}</p>
+        <div className='mx-auto grid max-w-2xl grid-cols-6 gap-y-3 sm:grid-cols-10 sm:gap-y-6'>
+            {extensionDetails.map((extension) => {
+                return (
+                    <div key={extension.name} className='group relative inline-flex justify-center'>
+                        <Link href={``} target='_blank'>
+                            <img className='size-9 hover:cursor-pointer' src={extension.iconUri} alt={extension.name} />
+                        </Link>
+                        <div className='absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 transform space-y-1.5 whitespace-nowrap rounded bg-neutral-200 p-3 text-sm text-black group-hover:block'>
+                            <h3 className='text-lg'>{extension.displayName}</h3>
+                            <p>Downloads: {extension.downloadCount.toLocaleString()}</p>
+                        </div>
                     </div>
-                </div>
-            ))}
+                );
+            })}
         </div>
     );
 };
