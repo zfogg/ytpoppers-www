@@ -1,4 +1,4 @@
-# Next.js 15 Starter (core) [[LIVE DEMO](https://nextjs-15-starter-tailwind.vercel.app/)]
+# Next.js 15 Starter (tailwind) [[LIVE DEMO](https://nextjs-15-starter-tailwind.vercel.app/)]
 
 *This is the Tailwind version for Next.js 15 Starter, you may be interested in other templates too -*
 - [**Next.js 15 Starter Core**](https://github.com/SiddharthaMaity/nextjs-15-starter-core)
