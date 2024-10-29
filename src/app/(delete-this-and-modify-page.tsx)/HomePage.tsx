@@ -52,7 +52,7 @@ const HomePage: React.FC = () => {
                         href='https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
                         target='_blank'
                         rel='noopener noreferrer'>
-                        Read our docs
+                        Read Next.js docs
                     </a>
                 </div>
             </div>
