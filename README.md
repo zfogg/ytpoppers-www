@@ -48,7 +48,7 @@ To enhance development experience, install the following VS Code extensions:
 - [**Import Cost**](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
 - [**JavaScript Booster**](https://marketplace.visualstudio.com/items?itemName=sburg.vscode-javascript-booster)
 - [**npm Intellisense**](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
-- [**Prettier - Code formatter**](https://marketplace.visualstudio.com/items?itemName=esbenp.
+- [**Prettier - Code formatter**](https://marketplace.visualstudio.com/items?itemName=esbenp)
 - [**Todo Tree**](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
 - [**Turbo Console Log**](https://marketplace.visualstudio.com/items?itemName=ChakrounAnas.turbo-console-log)
 - [**Package Json Upgrade**](https://marketplace.visualstudio.com/items?itemName=codeandstuff.package-json-upgrade)
