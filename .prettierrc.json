@@ -19,17 +19,10 @@
         "@trivago/prettier-plugin-sort-imports",
         "prettier-plugin-tailwindcss"
     ],
-    "tailwindFunctions": [
-        "cn"
-    ],
     "importOrder": [
-        "fs|os|path",
         "^react$",
         "^next(/.*)?$",
         "next-themes",
-        "@radix-ui/react-.*",
-        "clsx|tailwind-merge",
-        "class-variance-authority",
         "@/*",
         "<THIRD_PARTY_MODULES>"
     ],

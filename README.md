@@ -1,5 +1,9 @@
 # Next.js 15 Starter (core) [[LIVE DEMO](https://nextjs-15-starter-core.vercel.app/)]
 
+*This is the core version for Next.js 15 Starter, you may be interested in other templates too -*
+- [**Next.js 15 Starter with Tailwind CSS**](https://github.com/SiddharthaMaity/nextjs-15-starter-tailwind)
+- [**Next.js 15 Starter with Shadcn UI**](https://github.com/SiddharthaMaity/nextjs-15-starter-shadcn)
+
 Welcome to the **Next.js 15 Starter** repository! This starter template is built with Next.js 15, React 19, TypeScript 5 and comes packed with several powerful tools and configurations to accelerate your project setup and streamline development workflows using VS Code.
 
 ![Next.js 15 Starter](public/images/screenshot.png)
@@ -9,7 +13,6 @@ Welcome to the **Next.js 15 Starter** repository! This starter template is built
 - **Next.js 15 (Stable)**
 - **React 19 (RC)**
 - **TypeScript 5**
-- **TailwindCSS 3**
 - **ESLint 9**
 - **Prettier 3**
 - **App Directory**
@@ -23,14 +26,12 @@ Welcome to the **Next.js 15 Starter** repository! This starter template is built
 - [**typescript-eslint**](https://github.com/typescript-eslint/typescript-eslint)
 - [**eslint-plugin-react**](https://github.com/jsx-eslint/eslint-plugin-react)
 - [**@next/eslint-plugin-next**](https://github.com/vercel/next.js)
-- [**eslint-plugin-tailwindcss**](https://github.com/francoismassart/eslint-plugin-tailwindcss)
 - [**eslint-config-prettier**](eslint-config-prettier)
 - [**eslint-plugin-import**](https://github.com/import-js/eslint-plugin-import)
 - [**eslint-plugin-promise**](https://github.com/eslint-community/eslint-plugin-promise)
 
 ### ✨ Prettier Plugins
 
-- [**prettier-plugin-tailwindcss**](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
 - [**@trivago/prettier-plugin-sort-imports**](https://github.com/trivago/prettier-plugin-sort-imports)
 
 ### 💻 VS Code Extensions (Recommended)
@@ -47,12 +48,10 @@ To enhance development experience, install the following VS Code extensions:
 - [**Import Cost**](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
 - [**JavaScript Booster**](https://marketplace.visualstudio.com/items?itemName=sburg.vscode-javascript-booster)
 - [**npm Intellisense**](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
-- [**Prettier - Code formatter**](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [**Tailwind CSS IntelliSense**](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+- [**Prettier - Code formatter**](https://marketplace.visualstudio.com/items?itemName=esbenp.
 - [**Todo Tree**](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
 - [**Turbo Console Log**](https://marketplace.visualstudio.com/items?itemName=ChakrounAnas.turbo-console-log)
 - [**Package Json Upgrade**](https://marketplace.visualstudio.com/items?itemName=codeandstuff.package-json-upgrade)
-- [**Inline fold**](https://marketplace.visualstudio.com/items?itemName=moalamri.inline-fold)
 - [**Visual Studio Code Commitizen Support**](https://marketplace.visualstudio.com/items?itemName=KnisterPeter.vscode-commitizen)
 - [**Markdown All in One**](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 

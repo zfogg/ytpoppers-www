@@ -3,6 +3,7 @@ import Link from 'next/link';
 import './ExtensionDetails.css';
 
 const RECOMMENDED_EXTENSIONS: string[] = [
+    'PulkitGangwar.nextjs-snippets',
     'formulahendry.auto-close-tag',
     'aaron-bond.better-comments',
     'mikestead.dotenv',
@@ -14,7 +15,6 @@ const RECOMMENDED_EXTENSIONS: string[] = [
     'sburg.vscode-javascript-booster',
     'christian-kohler.npm-intellisense',
     'esbenp.prettier-vscode',
-    'bradlc.vscode-tailwindcss',
     'Gruntfuggly.todo-tree',
     'ChakrounAnas.turbo-console-log',
     'codeandstuff.package-json-upgrade',
