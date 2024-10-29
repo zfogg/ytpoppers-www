@@ -1,6 +1,6 @@
 # Next.js 15 Starter (core) [[LIVE DEMO](https://nextjs-15-starter-core.vercel.app/)]
 
-Welcome to the **Next.js 15 Starter** repository! This starter template is built with Next.js 15, React 19, and TypeScript 5, and comes packed with several powerful tools and configurations to accelerate your project setup and streamline development workflows using VS Code.
+Welcome to the **Next.js 15 Starter** repository! This starter template is built with Next.js 15, React 19, TypeScript 5 and comes packed with several powerful tools and configurations to accelerate your project setup and streamline development workflows using VS Code.
 
 ![Next.js 15 Starter](public/images/screenshot.png)
 
@@ -12,7 +12,8 @@ Welcome to the **Next.js 15 Starter** repository! This starter template is built
 - **TailwindCSS 3**
 - **ESLint 9**
 - **Prettier 3**
-- **App Directory with System, Light & Dark Mode**
+- **App Directory**
+- **System, Light & Dark Mode**
 - **Next.js Bundle Analyzer**
 - **Dockerfile** with Node.js 20.18.0 (Alpine)
 
@@ -38,7 +39,7 @@ To enhance development experience, install the following VS Code extensions:
 
 - [**Auto Close Tag**](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
 - [**Better Comments**](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
-- [**DotENV ↗**](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
+- [**DotENV**](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
 - [**EditorConfig for VS Code**](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 - [**ESLint**](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [**formate: CSS/LESS/SCSS formatter**](https://marketplace.visualstudio.com/items?itemName=MikeBovenlander.formate)
@@ -60,7 +61,7 @@ To enhance development experience, install the following VS Code extensions:
 
 ### Prerequisites
 
-- **Node.js**: Version 20.18.0 or higher (configured in Docker)
+- **Node.js**: Version 20.18.0 or higher
 - **Docker**: For containerized deployment (optional but recommended)
 
 ### Installation
