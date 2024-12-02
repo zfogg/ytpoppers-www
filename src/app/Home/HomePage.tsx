@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import NavigationBar from '@/app/Home/NavigationBar';
+import ThemeSwitchLayout from '@/app/components/ThemeSwitchLayout';
 import { Input } from '@/components/ui/input';
 
 const GoLink: React.FC<{ href: string | null }> = ({ href }) => {
@@ -43,56 +43,60 @@ const HomePage: React.FC = () => {
     const channelTopUrl = `/top/${channel}`;
 
     return (
-        <main className='mx-auto flex h-screen max-w-7xl flex-col justify-center gap-6 px-3 pt-6 font-[family-name:var(--font-geist-sans)] sm:gap-12 sm:px-0 sm:pt-0'>
-            <NavigationBar />
-            <div className='row-start-2 flex flex-col items-center justify-center gap-8 sm:items-center'>
-                <div className='flex flex-col items-center gap-4'>
-                    <p className='text-center text-lg sm:text-xl'>
-                        Paste a YouTube channel URL, @username, or channel ID
-                    </p>
-                    {/* TODO: get the channel id from ytpoppers-api instead of using a regex here */}
-                    <Input
-                        type='text'
-                        placeholder='https://www.youtube.com/@veritasium'
-                        value={channel}
-                        onChange={(e) => setChannel(e.target.value.replace(/^.+\//i, ''))}
-                        className='h-10 max-w-[400px] rounded-full bg-white dark:bg-neutral-800 sm:h-12'
-                    />
+        <ThemeSwitchLayout>
+            <main className='mx-auto flex max-w-7xl flex-col justify-center gap-6 px-3 pt-6 font-[family-name:var(--font-geist-sans)] sm:gap-12 sm:px-0 sm:pt-0'>
+                <div className='fixed right-4 top-4 z-50' />
+                <div className='row-start-2 flex flex-col items-center justify-center gap-8 sm:items-center'>
+                    <div className='flex flex-col items-center gap-4'>
+                        <p className='text-center text-lg sm:text-xl'>
+                            Paste a YouTube channel URL, @username, or channel ID
+                        </p>
+                        {/* TODO: get the channel id from ytpoppers-api instead of using a regex here */}
+                        <Input
+                            id='search'
+                            type='text'
+                            placeholder='https://www.youtube.com/@veritasium'
+                            value={channel}
+                            autoComplete='off'
+                            onChange={(e) => setChannel(e.target.value.replace(/^.+\//i, ''))}
+                            className='h-10 max-w-[400px] rounded-full bg-white dark:bg-neutral-800 sm:h-12'
+                        />
 
-                    <GoLink href={channel ? channelTopUrl : null} />
+                        <GoLink href={channel ? channelTopUrl : null} />
+                    </div>
                 </div>
-            </div>
-            <div className='row-start-3 hidden flex-wrap items-center justify-center gap-6 sm:flex'>
-                <a
-                    className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-                    href='https://github.com/zfogg/ytpoppers-api'
-                    target='_blank'
-                    rel='noopener noreferrer'>
-                    <Image
-                        aria-hidden
-                        src='https://nextjs.org/icons/github.svg'
-                        alt='GitHub icon'
-                        width={16}
-                        height={16}
-                    />
-                    GitHub (website)
-                </a>
-                <a
-                    className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-                    href='https://github.com/zfogg/ytpoppers-www'
-                    target='_blank'
-                    rel='noopener noreferrer'>
-                    <Image
-                        aria-hidden
-                        src='https://nextjs.org/icons/github.svg'
-                        alt='GitHub icon'
-                        width={16}
-                        height={16}
-                    />
-                    GitHub (api)
-                </a>
-            </div>
-        </main>
+                <div className='row-start-3 hidden flex-wrap items-center justify-center gap-6 sm:flex'>
+                    <a
+                        className='flex items-center gap-2 hover:underline hover:underline-offset-4'
+                        href='https://github.com/zfogg/ytpoppers-api'
+                        target='_blank'
+                        rel='noopener noreferrer'>
+                        <Image
+                            aria-hidden
+                            src='https://nextjs.org/icons/github.svg'
+                            alt='GitHub icon'
+                            width={16}
+                            height={16}
+                        />
+                        GitHub (website)
+                    </a>
+                    <a
+                        className='flex items-center gap-2 hover:underline hover:underline-offset-4'
+                        href='https://github.com/zfogg/ytpoppers-www'
+                        target='_blank'
+                        rel='noopener noreferrer'>
+                        <Image
+                            aria-hidden
+                            src='https://nextjs.org/icons/github.svg'
+                            alt='GitHub icon'
+                            width={16}
+                            height={16}
+                        />
+                        GitHub (api)
+                    </a>
+                </div>
+            </main>
+        </ThemeSwitchLayout>
     );
 };
 
