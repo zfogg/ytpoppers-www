@@ -8,20 +8,35 @@ import Link from 'next/link';
 import ThemeSwitchLayout from '@/app/components/ThemeSwitchLayout';
 import { Input } from '@/components/ui/input';
 
+import { Loader2 } from 'lucide-react';
+
 const GoLink: React.FC<{ href: string | null }> = ({ href }) => {
+    const [isLoading, setIsLoading] = useState(false);
+
+    const handleClick = () => {
+        if (href) {
+            setIsLoading(true);
+        }
+    };
+
     return href ? (
         <Link
             className='flex h-10 flex-wrap items-center justify-center gap-2 gap-x-3 rounded-full border border-solid border-transparent bg-lime-300 px-4 text-sm transition-colors hover:bg-neutral-300 dark:bg-lime-500 dark:hover:bg-neutral-600 sm:h-12 sm:px-5 sm:text-base lg:min-w-[400px]'
             href={href}
+            onClick={handleClick}
             rel='noopener noreferrer'>
-            <Image
-                className='invert dark:invert-0'
-                src='https://nextjs.org/icons/vercel.svg'
-                alt='Vercel logomark'
-                width={20}
-                height={20}
-            />
-            Go!
+            {isLoading ? (
+                <Loader2 className='size-5 animate-spin' />
+            ) : (
+                <Image
+                    className='invert dark:invert-0'
+                    src='https://nextjs.org/icons/vercel.svg'
+                    alt='Vercel logomark'
+                    width={20}
+                    height={20}
+                />
+            )}
+            {isLoading ? 'Loading...' : 'Go!'}
         </Link>
     ) : (
         <div className='flex h-10 cursor-not-allowed flex-wrap items-center justify-center gap-2 gap-x-3 rounded-full border border-solid border-transparent bg-neutral-200 px-4 text-sm transition-colors hover:bg-neutral-300 dark:bg-neutral-700 dark:hover:bg-rose-900 sm:h-12 sm:px-5 sm:text-base lg:min-w-[400px]'>
