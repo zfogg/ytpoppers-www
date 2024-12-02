@@ -55,7 +55,7 @@ const HomePage: React.FC = () => {
                         type='text'
                         placeholder='https://www.youtube.com/@veritasium'
                         value={channel}
-                        onChange={(e) => setChannel(e.target.value.replace(/^https:\/\/.+\//i, ''))}
+                        onChange={(e) => setChannel(e.target.value.replace(/^.+\//i, ''))}
                         className='h-10 max-w-[400px] rounded-full bg-white dark:bg-neutral-800 sm:h-12'
                     />
 
