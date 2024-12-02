@@ -4,7 +4,7 @@ const NavigationBar = () => {
     return (
         <div className='flex w-full flex-col items-center justify-center'>
             <header>
-                <h1 className='text-center text-3xl font-extrabold leading-tight tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl'>
+                <h1 className='text-center text-5xl font-extrabold leading-tight tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl'>
                     <span className='block text-[hsl(280,100%,70%)] transition-colors duration-200 hover:text-[hsl(204,100%,71%)]'>
                         ytpoppers
                     </span>

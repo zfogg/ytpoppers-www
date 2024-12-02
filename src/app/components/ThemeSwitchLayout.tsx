@@ -16,10 +16,10 @@ const ThemeSwitchLayout: React.FC<ThemeSwitchLayoutProps> = ({ children }) => {
         <div className='flex min-h-screen flex-col'>
             <div className='grid grid-cols-3'>
                 <div></div>
-                <Link className='mt-[100px] pb-6' href='/'>
+                <Link className='mt-[80px] pb-6 sm:mt-[100px]' href='/'>
                     <NavigationBar />
                 </Link>
-                <div className='flex justify-end pr-6 pt-8'>
+                <div className='mt-8 flex pr-6'>
                     <ThemeSwitch />
                 </div>
             </div>
