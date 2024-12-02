@@ -37,10 +37,16 @@ const GoLink: React.FC<{ href: string | null }> = ({ href }) => {
     );
 };
 
+function getTopChannelUrl(channel: string): string {
+    let chan = channel;
+    chan = chan.replace(/^.+\//i, ''); // remove from the start to the last slash
+    chan = chan.replace(/\?.*$/i, ''); // remove from any question mark to the end
+
+    return `/top/${chan}`;
+}
+
 const HomePage: React.FC = () => {
     const [channel, setChannel] = useState<string>('');
-
-    const channelTopUrl = `/top/${channel}`;
 
     return (
         <ThemeSwitchLayout>
@@ -58,16 +64,11 @@ const HomePage: React.FC = () => {
                             placeholder='https://www.youtube.com/@veritasium'
                             value={channel}
                             autoComplete='off'
-                            onChange={(e) => {
-                                let chan = e.target.value;
-                                chan = chan.replace(/^.+\//i, ''); // remove from the start to the last slash
-                                chan = chan.replace(/\?.*$/i, ''); // remove from any question mark to the end
-                                setChannel(chan);
-                            }}
+                            onChange={(e) => setChannel(e.target.value)}
                             className='h-10 max-w-[400px] rounded-full bg-white dark:bg-neutral-800 sm:h-12'
                         />
 
-                        <GoLink href={channel ? channelTopUrl : null} />
+                        <GoLink href={channel.length > 0 ? getTopChannelUrl(channel) : null} />
                     </div>
                 </div>
                 <div className='row-start-3 hidden flex-wrap items-center justify-center gap-6 sm:flex'>
