@@ -1,14 +1,14 @@
 import Image from 'next/image';
 
-import ExtensionDetails from '@/app/(delete-this-and-modify-page.tsx)/ExtensionDetails';
-import NavigationBar from '@/app/(delete-this-and-modify-page.tsx)/NavigationBar';
-import SetupDetails from '@/app/(delete-this-and-modify-page.tsx)/SetupDetails';
+import ExtensionDetails from '@/app/Home/ExtensionDetails';
+import NavigationBar from '@/app/Home/NavigationBar';
+import SetupDetails from '@/app/Home/SetupDetails';
 
 const HomePage: React.FC = () => {
     return (
         <main className='mx-auto flex h-screen max-w-7xl flex-col justify-center gap-6 px-3 pt-6 font-[family-name:var(--font-geist-sans)] sm:gap-12 sm:px-0 sm:pt-0'>
             <NavigationBar />
-            <div className='justify-centersm:items-start row-start-2 flex flex-col items-center gap-8'>
+            <div className='row-start-2 flex flex-col items-center justify-center gap-8 sm:items-center'>
                 <div className='flex items-center gap-4'>
                     <Image
                         className='h-6 dark:invert sm:h-8'
