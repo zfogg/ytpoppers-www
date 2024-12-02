@@ -46,9 +46,5 @@
         "prettier": "^3.3.3",
         "prettier-plugin-tailwindcss": "^0.6.9",
         "typescript-eslint": "^8.15.0"
-    },
-    "overrides": {
-        "@types/react": "npm:types-react@19.0.0-rc.1",
-        "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
     }
 }
