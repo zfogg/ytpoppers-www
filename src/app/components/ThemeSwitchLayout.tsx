@@ -4,8 +4,8 @@ import React from 'react';
 
 import Link from 'next/link';
 
-import NavigationBar from '@/app/Home/NavigationBar';
-import ThemeSwitch from '@/app/Home/ThemeSwitch';
+import NavigationBar from '@/app/components/NavigationBar';
+import ThemeSwitch from '@/app/components/ThemeSwitch';
 
 interface ThemeSwitchLayoutProps {
     children: React.ReactNode;
@@ -19,7 +19,7 @@ const ThemeSwitchLayout: React.FC<ThemeSwitchLayoutProps> = ({ children }) => {
             </div>
             <div className='grid grid-cols-3'>
                 <div></div>
-                <Link className='mt-[80px] pb-6 sm:mt-[100px]' href='/'>
+                <Link className='mt-6 pb-6 sm:mt-[50px] md:mt-[50px] lg:mt-[80px]' href='/'>
                     <NavigationBar />
                 </Link>
                 <div></div>
