@@ -5,7 +5,7 @@ import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import HomeLayout from '@/app/components/HomeLayout';
+import HomeLayout from '@/app/Home/HomeLayout';
 import { Input } from '@/components/ui/input';
 
 import { Loader2 } from 'lucide-react';
@@ -19,7 +19,7 @@ const GoLink: React.FC<{
     return href ? (
         <Link
             ref={ref}
-            className='flex h-10 min-w-[200px] flex-wrap items-center justify-center gap-2 gap-x-3 rounded-full border border-solid border-transparent bg-lime-200 px-4 text-sm transition-colors hover:bg-neutral-300 dark:bg-lime-500 dark:hover:bg-neutral-600 sm:h-12 sm:min-w-[400px] sm:px-5 sm:text-base'
+            className={`flex h-10 min-w-[200px] flex-wrap items-center justify-center gap-2 gap-x-3 rounded-full border border-solid border-transparent px-4 text-sm transition-colors ${isLoading ? 'bg-amber-400 dark:bg-amber-500' : 'bg-cyan-400 text-white dark:bg-cyan-600'} ${isLoading ? '' : 'hover:bg-neutral-300 dark:hover:bg-neutral-600'} sm:h-12 sm:min-w-[400px] sm:px-5 sm:text-base`}
             onClick={onClick}
             href={href}
             rel='noopener noreferrer'>
@@ -108,20 +108,6 @@ const HomePage: React.FC = () => {
                 <div className='row-start-3 hidden flex-wrap items-center justify-center gap-6 sm:flex'>
                     <a
                         className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-                        href='https://github.com/zfogg/ytpoppers-api'
-                        target='_blank'
-                        rel='noopener noreferrer'>
-                        <Image
-                            aria-hidden
-                            src='https://nextjs.org/icons/github.svg'
-                            alt='GitHub icon'
-                            width={16}
-                            height={16}
-                        />
-                        GitHub (website)
-                    </a>
-                    <a
-                        className='flex items-center gap-2 hover:underline hover:underline-offset-4'
                         href='https://github.com/zfogg/ytpoppers-www'
                         target='_blank'
                         rel='noopener noreferrer'>
@@ -129,10 +115,24 @@ const HomePage: React.FC = () => {
                             aria-hidden
                             src='https://nextjs.org/icons/github.svg'
                             alt='GitHub icon'
-                            width={16}
-                            height={16}
+                            width={24}
+                            height={24}
                         />
-                        GitHub (api)
+                        (this website)
+                    </a>
+                    <a
+                        className='flex items-center gap-2 hover:underline hover:underline-offset-4'
+                        href='https://github.com/zfogg/ytpoppers-api'
+                        target='_blank'
+                        rel='noopener noreferrer'>
+                        <Image
+                            aria-hidden
+                            src='https://nextjs.org/icons/github.svg'
+                            alt='GitHub icon'
+                            width={24}
+                            height={24}
+                        />
+                        (the api)
                     </a>
                 </div>
             </main>

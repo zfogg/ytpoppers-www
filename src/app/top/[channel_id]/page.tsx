@@ -3,8 +3,7 @@ import { Suspense } from 'react';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import ThemeSwitchLayout from '@/app/components/ThemeSwitchLayout';
-
+import TopPageLayout from './TopPageLayout';
 import { TopVideos, Video } from './TopVideos';
 
 interface Props {
@@ -34,13 +33,10 @@ const API_URL = process.env.YTPOPPERS_API_URL;
 
 async function getChannelData(channelId: string, max_results = '64'): Promise<TopChannelsResponse> {
     const fetchUrl = `${API_URL}/analyze?channel=${channelId}&max_results=${max_results}`;
-    console.log('FETCH URL', fetchUrl);
     const response = await fetch(
         fetchUrl,
         { next: { revalidate: 3600 } } // Cache for 1 hour
     );
-
-    console.log('FETCH', response);
 
     if (!response.ok) {
         throw new Error('Failed to fetch channel data');
@@ -69,7 +65,7 @@ export default async function TopVideoPage({ params, searchParams }: Props) {
         }
 
         return (
-            <ThemeSwitchLayout>
+            <TopPageLayout>
                 <main className='mx-auto flex max-w-7xl flex-col gap-6 p-6 font-[family-name:var(--font-geist-sans)] sm:gap-12 sm:px-6'>
                     <div className='flex flex-col items-center gap-4'>
                         <h1 className='mb-4 text-4xl font-bold'>Top videos for {decodeURIComponent(channel_id)}</h1>
@@ -79,11 +75,11 @@ export default async function TopVideoPage({ params, searchParams }: Props) {
                         </Suspense>
                     </div>
                 </main>
-            </ThemeSwitchLayout>
+            </TopPageLayout>
         );
     } catch (error) {
         return (
-            <ThemeSwitchLayout>
+            <TopPageLayout>
                 <main className='mx-auto flex max-w-7xl flex-col justify-center gap-6 p-6 font-[family-name:var(--font-geist-sans)] sm:gap-12 sm:px-0 sm:pt-0'>
                     <div className='mb-8 flex flex-col items-center gap-4'>
                         <h1 className='mb-8 text-4xl font-bold'>Error</h1>
@@ -91,7 +87,7 @@ export default async function TopVideoPage({ params, searchParams }: Props) {
                         <p className='text-red-500'>{error instanceof Error ? error.message : 'Unknown error'}</p>
                     </div>
                 </main>
-            </ThemeSwitchLayout>
+            </TopPageLayout>
         );
     }
 }

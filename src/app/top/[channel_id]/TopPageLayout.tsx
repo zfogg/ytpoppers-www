@@ -6,12 +6,13 @@ import Link from 'next/link';
 
 import NavigationBar from '@/app/components/NavigationBar';
 import ThemeSwitch from '@/app/components/ThemeSwitch';
+import Footer from '@/app/components/Footer';
 
-interface ThemeSwitchLayoutProps {
+interface TopPageLayoutProps {
     children: React.ReactNode;
 }
 
-const ThemeSwitchLayout: React.FC<ThemeSwitchLayoutProps> = ({ children }) => {
+const TopPageLayout: React.FC<TopPageLayoutProps> = ({ children }) => {
     return (
         <div className='flex min-h-screen flex-col'>
             <div className='mt-8 flex self-end pr-[32px]'>
@@ -25,8 +26,9 @@ const ThemeSwitchLayout: React.FC<ThemeSwitchLayoutProps> = ({ children }) => {
                 <div></div>
             </div>
             <div className='flex flex-1 items-center justify-center'>{children}</div>
+            <Footer />
         </div>
     );
 };
 
-export default ThemeSwitchLayout;
+export default TopPageLayout;
