@@ -68,7 +68,9 @@ export default async function TopVideoPage({ params, searchParams }: Props) {
             <TopPageLayout>
                 <main className='mx-auto flex max-w-7xl flex-col gap-6 p-6 font-[family-name:var(--font-geist-sans)] sm:gap-12 sm:px-6'>
                     <div className='flex flex-col items-center gap-4'>
-                        <h1 className='mb-4 text-4xl font-bold'>Top videos for {decodeURIComponent(channel_id)}</h1>
+                        <h1 className='mb-4 text-center text-4xl font-bold'>
+                            Top videos for {decodeURIComponent(channel_id)}
+                        </h1>
                         <p className='mb-8 text-muted-foreground'>Analyzed {data.total_videos_analyzed} videos</p>
                         <Suspense fallback={<TopVideos videos={[]} isLoading={true} />}>
                             <TopVideos videos={data.top_videos} isLoading={false} />
