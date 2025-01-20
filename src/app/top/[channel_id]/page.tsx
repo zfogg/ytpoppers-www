@@ -29,14 +29,24 @@ interface TopChannelsResponse {
     top_videos: Video[];
 }
 
-const API_URL = process.env.YTPOPPERS_API_URL;
+const API_URL = process.env.YTPOPPERS_API_URL || 'http://localhost:3001';
+const API_USERNAME = process.env.YTPOPPERS_API_USERNAME || 'username';
+const API_PASSWORD = process.env.YTPOPPERS_API_PASSWORD || 'password';
 
 async function getChannelData(channelId: string, max_results = '64'): Promise<TopChannelsResponse> {
     const fetchUrl = `${API_URL}/analyze?channel=${channelId}&max_results=${max_results}`;
-    const response = await fetch(
-        fetchUrl,
-        { next: { revalidate: 3600 } } // Cache for 1 hour
-    );
+
+    const headers = new Headers();
+
+    // * INFO: Basic auth on API calls. Ask @zfogg for the username and password as he set it during the
+    // * INFO: AWS SAM deploy of `ytpoppers-api` (see /template.yaml in that repo for secrets management info).
+    headers.append('Authorization', `Basic ${Buffer.from(`${API_USERNAME}:${API_PASSWORD}`).toString('base64')}`);
+
+    const response = await fetch(fetchUrl, {
+        method: 'GET',
+        headers,
+        next: { revalidate: 3600 } // Cache for 1 hour
+    });
 
     if (!response.ok) {
         throw new Error('Failed to fetch channel data');
