@@ -33,7 +33,7 @@ const API_URL = process.env.YTPOPPERS_API_URL || 'http://localhost:3001';
 const API_USERNAME = process.env.YTPOPPERS_API_USERNAME || 'username';
 const API_PASSWORD = process.env.YTPOPPERS_API_PASSWORD || 'password';
 
-async function getChannelData(channelId: string, max_results = '64'): Promise<TopChannelsResponse> {
+async function getChannelData(channelId: string, max_results = '60'): Promise<TopChannelsResponse> {
     const fetchUrl = `${API_URL}/analyze?channel=${channelId}&max_results=${max_results}`;
 
     const headers = new Headers();
@@ -57,7 +57,7 @@ async function getChannelData(channelId: string, max_results = '64'): Promise<To
 
 export default async function TopVideoPage({ params, searchParams }: Props) {
     const { channel_id } = await params;
-    const max_results = (await searchParams)?.max_results?.toString() ?? '64';
+    const max_results = (await searchParams)?.max_results?.toString() ?? '60';
 
     if (!channel_id) {
         notFound();
@@ -78,10 +78,20 @@ export default async function TopVideoPage({ params, searchParams }: Props) {
             <TopPageLayout>
                 <main className='mx-auto flex max-w-7xl flex-col gap-6 p-6 font-[family-name:var(--font-geist-sans)] sm:gap-12 sm:px-6'>
                     <div className='flex flex-col items-center gap-4'>
-                        <h1 className='mb-4 text-center text-4xl font-bold'>
-                            Top videos for {decodeURIComponent(channel_id)}
-                        </h1>
-                        <p className='mb-8 text-muted-foreground'>Analyzed {data.total_videos_analyzed} videos</p>
+                        <header>
+                            <h1 className='mb-4 text-center text-4xl font-bold'>
+                                Top videos for{' '}
+                                <a
+                                    href={`https://www.youtube.com/channel/${data.channel_id}`}
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                    className='text-[hsl(332,100%,76%)] underline transition-colors duration-200 hover:text-[hsl(138,100%,71%)]'>
+                                    {decodeURIComponent(channel_id)}
+                                    <img src='/images/youtube.png' alt='YouTube Logo' width={25} height={18} className='ml-2 inline' />
+                                </a>
+                            </h1>
+                            <p className='mb-8 text-muted-foreground'>Analyzed {data.total_videos_analyzed} videos</p>
+                        </header>
                         <Suspense fallback={<TopVideos videos={[]} isLoading={true} />}>
                             <TopVideos videos={data.top_videos} isLoading={false} />
                         </Suspense>
